@@ -20,7 +20,7 @@ public:
         int back = listOfX.size() - 1;
         int middle = listOfX.size() / 2;
 
-        // runs n/2 times to if palindrome
+        // runs n/2 times to check if palindrome
         while(isPalindrome && front != middle){
             isPalindrome = (listOfX[front] == listOfX[back]) ? true : false;
             front++;

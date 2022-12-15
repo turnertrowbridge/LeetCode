@@ -33,6 +33,6 @@ public:
             l3->next = new ListNode(sum % 10);  // add the current place values to addedList
             l3 = l3->next;  // move to next value in addedList
     }
-        return addedList->next;     // addedList initializes with 0, so return all the nodes in addedList after that
+        return addedList->next;     // addedList initializes with 0, so return all the nodes in addedList after that 
     }
 };

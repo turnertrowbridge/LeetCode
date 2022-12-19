@@ -1,3 +1,5 @@
 # LeetCode
 Collection of LeetCode questions  
-Python and C++
+Languages Used: Python and C++  
+
+Created using [LeetHub](https://github.com/QasimWani/LeetHub)

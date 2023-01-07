@@ -1,8 +1,8 @@
 class Solution:
     def asteroidCollision(self, asteroids: List[int]) -> List[int]:
-        stack = []
+        
 
-        def collision_check(a):
+        def collision_check(stack, a):
             if stack:
                 # asteroid is moving left while the old asteroid is moving right
                 # meaning they will collide
@@ -15,7 +15,7 @@ class Solution:
                     # new asteroid breaks old asteroid, recurse to check for more collisions
                     elif a + stack[-1] < 0:
                         stack.pop()
-                        collision_check(a)
+                        collision_check(stack, a)
 
                 # no collision, add asteroid
                 else: stack.append(a)            
@@ -24,9 +24,10 @@ class Solution:
             else:
                 stack.append(a)
                    
-
+                    
+        stack = []
         for a in asteroids:
-            collision_check(a)
+            collision_check(stack, a)
 
         return stack
                 
